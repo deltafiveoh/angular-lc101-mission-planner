@@ -1,0 +1,13 @@
+.box {
+    display: flex;
+    padding: 10px;
+    background-color: dimgrey;
+}
+
+.top {
+    background-color: dodgerblue;
+}
+
+.exp {
+    background-color: forestgreen;
+}
