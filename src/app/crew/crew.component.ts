@@ -20,10 +20,20 @@ export class CrewComponent implements OnInit {
     {name: "Jeanette Epps", photo: 'https://handlers.education.launchcode.org/static/images/jeanette-epps.jpg'}
   ];
 
+  selectedCand: boolean = false;
+  imageDisplay: boolean = false;
+
   constructor() { }
 
   ngOnInit() { }
 
-  // Code the 'addCrewMember' function here:
-
+  addCrewMember(candidate: any) {
+    if (this.crew.includes(candidate) || this.crew.length > 3){
+      let candidateIndex = this.crew.indexOf(candidate);
+      this.crew.splice(candidateIndex, 1)
+    } else if (this.crew.length < 3) {
+      this.crew.push(candidate);
+      this.selectedCand = true;
+    }
+  }
 }
